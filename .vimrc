@@ -1,4 +1,4 @@
-
+" mark white personal vim configfile (vimrc it is)
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
