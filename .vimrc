@@ -15,6 +15,8 @@ Bundle 'kevinw/pyflakes-vim'
 
 Bundle  'ervandew/supertab'
 
+Bundle 'maksimr/vim-jsbeautify'
+
 " Bundle  'Valloric/YouCompleteMe'
 
 Bundle 'Shougo/neocomplete.vim'
@@ -73,6 +75,18 @@ let g:airline#extensions#whitespace#checks = ['long']
 let g:airline_theme='wombat'
 " nerdcommenter
 let g:NERDSpaceDelims=1
+" jsbeautify
+"map <c-f> :call JsBeautify()<cr>
+"" or
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for json
+autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" " for jsx
+autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+" " for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" " for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 
 
