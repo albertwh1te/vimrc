@@ -1,4 +1,7 @@
 " mark white personal vim configfile (vimrc it is)
+set nocompatible
+syntax on
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
@@ -17,9 +20,9 @@ Bundle  'ervandew/supertab'
 
 Bundle 'maksimr/vim-jsbeautify'
 
-" Bundle  'Valloric/YouCompleteMe'
+Bundle  'Valloric/YouCompleteMe'
 
-Bundle 'Shougo/neocomplete.vim'
+" Bundle 'Shougo/neocomplete.vim'
 
 Bundle 'ctrlpvim/ctrlp.vim'
 
@@ -31,6 +34,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'scrooloose/nerdcommenter'
+
+" End of vundle
+call vundle#end()
 
 " filetype finder
 filetype on            " enables filetype detection
@@ -90,7 +96,6 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " you complete me
 let g:ycm_auto_trigger = 1
 let g:ycm_min_num_of_chars_for_completion = 1
-
 
 
 
