@@ -35,6 +35,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'scrooloose/nerdcommenter'
 
+Plugin 'vim-scripts/taglist.vim'
+
 " End of vundle
 call vundle#end()
 
@@ -96,6 +98,12 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 " you complete me
 let g:ycm_auto_trigger = 1
 let g:ycm_min_num_of_chars_for_completion = 1
+" taglist
+let Tlist_Ctags_Cmd = '/usr/bin/ctags-exuberant' 
+let Tlist_Auto_Open = 1
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
 
 
 
