@@ -2,6 +2,8 @@
 set nocompatible
 syntax on
 filetype off
+execute pathogen#infect()
+
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
@@ -14,8 +16,6 @@ Bundle 'tpope/vim-fugitive'
 
 Bundle 'scrooloose/nerdtree'
 
-Bundle 'kevinw/pyflakes-vim'
-
 Bundle  'ervandew/supertab'
 
 Bundle 'maksimr/vim-jsbeautify'
@@ -27,6 +27,8 @@ Bundle  'Valloric/YouCompleteMe'
 Bundle 'ctrlpvim/ctrlp.vim'
 
 Bundle 'ihacklog/HiCursorWords'
+
+Bundle 'scrooloose/syntastic'
 
 " Plugin
 Plugin 'hynek/vim-python-pep8-indent'
@@ -51,7 +53,6 @@ filetype on            " enables filetype detection
 filetype plugin on     " enables filetype specific plugins
 
 filetype plugin indent on
-
 
 " Use smartcase.
 "
@@ -113,6 +114,20 @@ let Tlist_Use_Right_Window = 1
 nnoremap <F3> :TlistToggle<CR>
 " set high light the search 
 set hlsearch
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_python_checkers = ['pyflakes']
+" 
+
+
+
 
 
 
