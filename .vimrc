@@ -2,11 +2,12 @@
 set nocompatible
 syntax on
 filetype off
-execute pathogen#infect()
 
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
+execute pathogen#infect()
+
 " Bundle
 Bundle 'gmarik/vundle'
 
@@ -29,6 +30,8 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'ihacklog/HiCursorWords'
 
 Bundle 'scrooloose/syntastic'
+
+" Bundle 'nvie/vim-flake8'
 
 " Plugin
 Plugin 'hynek/vim-python-pep8-indent'
@@ -122,9 +125,11 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pyflakes']
-" 
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+
 
 
 
