@@ -1,17 +1,14 @@
-" mark white personal vim configfile (vimrc it is)
-set nocompatible
-syntax on
-filetype off
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-call vundle#rc()
-execute pathogen#infect()
-
-" Bundle
-Bundle 'gmarik/vundle'
-
-Bundle 'L9'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 Bundle 'tpope/vim-fugitive'
 
@@ -31,6 +28,8 @@ Bundle 'ihacklog/HiCursorWords'
 
 Bundle 'scrooloose/syntastic'
 
+Bundle 'kevinw/pyflakes-vim'
+
 " Bundle 'nvie/vim-flake8'
 
 " Plugin
@@ -47,10 +46,9 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'tell-k/vim-autopep8'
 
 Plugin 'easymotion/vim-easymotion'
-" End of vundle
-call vundle#end()
 
-" filetype finder
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 filetype on            " enables filetype detection
 
 filetype plugin on     " enables filetype specific plugins
@@ -80,8 +78,8 @@ map <C-n> :NERDTreeToggle<CR>
 " Show line number
 set number
 " Solarized theme
-let g:solarized_termcolors= 32
-set background=light
+" let g:solarized_termcolors= 32
+" set background=light
 " colorscheme solarized
 " set t_Co=32
 set term=screen-256color
