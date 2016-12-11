@@ -2,8 +2,6 @@
 set nocompatible
 syntax on
 filetype off
-execute pathogen#infect()
-
 set rtp+=~/.vim/bundle/vundle/
 
 call vundle#rc()
@@ -15,6 +13,8 @@ Bundle 'L9'
 Bundle 'tpope/vim-fugitive'
 
 Bundle 'scrooloose/nerdtree'
+
+Bundle 'kevinw/pyflakes-vim'
 
 Bundle  'ervandew/supertab'
 
@@ -28,16 +28,10 @@ Bundle 'ctrlpvim/ctrlp.vim'
 
 Bundle 'ihacklog/HiCursorWords'
 
-Bundle 'scrooloose/syntastic'
-
-Bundle 'altercation/vim-colors-solarized'
-
 " Plugin
-" Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'hynek/vim-python-pep8-indent'
 
 Plugin 'vim-airline/vim-airline'
-
-Plugin 'kevinw/pyflakes-vim'
 
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -57,6 +51,7 @@ filetype on            " enables filetype detection
 filetype plugin on     " enables filetype specific plugins
 
 filetype plugin indent on
+
 
 " Use smartcase.
 "
@@ -83,9 +78,9 @@ set number
 " Solarized theme
 let g:solarized_termcolors= 32
 set background=light
-colorscheme solarized
-set t_Co=32
-" set term=screen-256color
+" colorscheme solarized
+" set t_Co=32
+set term=screen-256color
 " Airline
 set laststatus=2
 let g:airline#extensions#whitespace#checks = ['long']
@@ -109,7 +104,7 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 let g:ycm_auto_trigger = 1
 let g:ycm_min_num_of_chars_for_completion = 1
 " taglist
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags' 
+let Tlist_Ctags_Cmd = '/usr/bin/ctags-exuberant' 
 " let Tlist_Auto_Open = 1
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
@@ -118,20 +113,6 @@ let Tlist_Use_Right_Window = 1
 nnoremap <F3> :TlistToggle<CR>
 " set high light the search 
 set hlsearch
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 1
-let g:syntastic_python_checkers = ['pyflakes']
-let g:syntastic_html_checkers = []
-" clipboard
-set clipboard=unnamed
-
 
 
 

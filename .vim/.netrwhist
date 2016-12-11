@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/webapps/xueqiu_predict/xueqiu/stock'
+let g:netrw_dirhist_2='/webapps/xueqiu_predict/xueqiu/xueqiu'
+let g:netrw_dirhist_3='/webapps/xueqiu_predict/xueqiu/stock'
+let g:netrw_dirhist_4='/webapps/xueqiu_predict'
+let g:netrw_dirhist_5='/webapps/xueqiu_predict/xueqiu'
+let g:netrw_dirhist_6='/webapps/xueqiu_predict/env'
+let g:netrw_dirhist_7='/webapps/xueqiu_predict/xueqiu/stock'
